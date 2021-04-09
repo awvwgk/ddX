@@ -66,6 +66,32 @@ find_package(LAPACK REQUIRED)
 find_package(OpenMP REQUIRED)
 
 ###############################################################################
+##                          BUILDS FOR PYTHON                                ##
+###############################################################################
+if (PYTHON)
+    message(STATUS "Switching to python-only build.")
+    add_subdirectory(external/pybind11)
+
+    pybind11_add_module(pyddx
+        src/ddx_core.f90
+        src/ddx_operators.f90
+        src/ddx_solvers.f90
+        src/ddx.f90
+        src/ddx_lpb.f90
+        src/bessel.f90
+        src/llgnew.f
+        src/ddx_cinterface.f90
+        #
+        src/pyddx.cpp
+        src/pyddx_data.cpp
+    )
+    target_compile_definitions(pyddx PRIVATE VERSION_INFO=${VERSION})
+    target_link_libraries(pyddx PUBLIC ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
+
+    return()  # Ignore the rest of the file
+endif()
+
+###############################################################################
 ##                           DEFINE OPTIONS                                  ##
 ###############################################################################
 

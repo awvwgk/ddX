@@ -1,5 +1,14 @@
 # Download and Installation  {#label_download_and_install}
 
+**Build python:**
+```
+setup.py test
+```
+**Test python:**
+```
+./run_ddx.py
+```
+
 **Download the ddX source code** at: 
 ``` markdown
 > git clone git@github.com:ACoM-Computational-Mathematics/ddX.git
