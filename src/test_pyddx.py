@@ -1,8 +1,8 @@
+import pyddx
+
 from pytest import approx
 
 import numpy as np
-
-import pyddx
 
 
 def test_reference_pcm():
@@ -29,12 +29,15 @@ def test_reference_pcm():
         [-0.00103, -4.05914, -2.34326],  # noqa: E201
         [-0.00103, -4.05914,  2.34326],  # noqa: E201
         [ 0.00000,  0.00000,  4.68652],  # noqa: E201
-    ])
+    ]).T
 
-    epsilon = 78.3553
-    model = pyddx.Model("pcm", charges, centres, rvdw, epsilon)
-    nuclear_mep = model.solute_nuclear_contribution()
-    solvation = model.compute(nuclear_mep["phi"], nuclear_mep["psi"])
+    model = pyddx.Model("pcm", charges, centres, rvdw, solvent_epsilon=78.3553)
+    nuclear = model.solute_nuclear_contribution()
+    state = model.initial_guess()
+    state = model.solve(state, nuclear["phi"])
+    state = model.adjoint_solve(state, nuclear["psi"])
+    # TODO Test force
 
+    energy = 0.5 * np.sum(state.x * nuclear["psi"])
     ref = -0.00017974013712832552
-    assert solvation.energy == approx(ref)
+    assert energy == approx(ref)

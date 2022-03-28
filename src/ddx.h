@@ -7,56 +7,90 @@
 extern "C" {
 #endif
 
-// TODO const qualifiers to pointers
-
-int ddx_get_supported_lebedev_grids(int n, int* grids);
-
-// pass solver arguments delayed
-// no print level in this function, just problem setup and discretisation, fmm
-void* ddx_init(int nsph, const double* charge, const double* x, const double* y,
-               const double* z, const double* rvdw, int model, int lmax, int ngrid,
-               int force, int fmm, int pm, int pl, double se, double eta, double eps,
-               double kappa, int nproc, int* info);
-void ddx_finish(void* ddx);
-
-int ddx_get_ncav(const void* ddx);
-int ddx_get_nsph(const void* ddx);
-int ddx_get_nbasis(const void* ddx);
-int ddx_get_ngrid(const void* ddx);
-int ddx_get_lmax(const void* ddx);
-double ddx_get_epsilon(const void* ddx);
-
-// get cavity coordinates, column-major array (3, ncav)
-void ddx_get_ccav(const void* ddx, int ncav, double* ccav);
+//
+// Generic stuff
+//
+int ddx_supported_lebedev_grids(int n, int* grids);
 
 // Get scaled ylm at a point and with respect to a cavity sphere
 void ddx_scaled_ylm(const void* c_ddx, int lmax, const double* x, int sphere,
                     double* ylm);
 
-// This is a misnomer ... computes the classical electrostatics contribution
-// from the atoms stored inside ddx using the ddx_init.
-//
-// phi: electrostatic potential at the cavity points  (what people call MEP)
-// psi: multipolar representation of potential from solute charge inside a cavity sphere
-//
-void ddx_mkrhs(const void* ddx, int nsph, int ncav, int nbasis, double* phi_cav,
-               double* gradphi_cav, double* psi);
+void ddx_nuclear_contributions(const void* c_ddx, int nsph, int ncav, int nbasis,
+                               double* phi, double* gradphi, double* psi);
 
-void ddx_mkxi(const void* ddx, int nsph, int ncav, int nbasis, const double* s,
-              double* xi);
-
-// phi is only needed to solve the response system
-// psi is only needed for the energy
-
-// Separate functions for energy and forces !
-// i.e. one function to solve the dd system and return X
-// one to take X and compute the energy
-// one to take X, \phi, ... and compute the force
 //
-void ddx_solve(const void* ddx, int nsph, int ncav, int nbasis, const double* phi_cav,
-               const double* gradphi_cav, const double* psi, int itersolver, double tol,
-               int maxiter, int ndiis, int iprint, double* esolv, double* xs, double* s,
-               double* force);
+// Setup object
+//
+void* ddx_allocate_model(int model, int enable_force, double solvent_epsilon,
+                         double solvent_kappa, double eta, int lmax, int n_lebedev,
+                         int incore, int maxiter, int jacobi_n_diis, int enable_fmm,
+                         int fmm_multipole_lmax, int fmm_local_lmax, int n_proc,
+                         int n_spheres, const double* sphere_charges,
+                         const double* sphere_centres, const double* sphere_radii,
+                         int* info);
+void ddx_deallocate_model(void* ddx);
+
+void ddx_get_error_message(const void* ddx, char* message, int maxlen);
+
+// Generated block, see scripts/generate_cinterface.py
+int ddx_get_enable_fmm(const void* ddx);
+int ddx_get_enable_force(const void* ddx);
+int ddx_get_jacobi_n_diis(const void* ddx);
+int ddx_get_lmax(const void* ddx);
+int ddx_get_incore(const void* ddx);
+int ddx_get_maxiter(const void* ddx);
+int ddx_get_model(const void* ddx);
+int ddx_get_n_lebedev(const void* ddx);
+int ddx_get_n_spheres(const void* ddx);
+int ddx_get_n_proc(const void* ddx);
+int ddx_get_fmm_local_lmax(const void* ddx);
+int ddx_get_fmm_multipole_lmax(const void* ddx);
+double ddx_get_solvent_epsilon(const void* ddx);
+double ddx_get_eta(const void* ddx);
+double ddx_get_solvent_kappa(const void* ddx);
+void ddx_get_sphere_charges(const void* ddx, int nsph, double* c_charge);
+void ddx_get_sphere_centres(const void* ddx, int nsph, double* c_csph);
+void ddx_get_sphere_radii(const void* ddx, int nsph, double* c_rsph);
+int ddx_get_n_basis(const void* ddx);
+int ddx_get_n_cav(const void* ddx);
+void ddx_get_cavity(const void* ddx, int ncav, double* c_ccav);
+// end generated block
+
+//
+// State object
+//
+void* ddx_allocate_state(const void* ddx);
+void ddx_deallocate_state(void* state);
+
+void ddx_get_x(const void* state, int nbasis, int nsph, double* x);
+int ddx_get_x_niter(const void* state);
+void ddx_get_s(const void* state, int nbasis, int nsph, double* s);
+int ddx_get_s_niter(const void* state);
+// Hext one will change syntax later:
+void ddx_get_xi(const void* state, const void* ddx, int ncav, double* xi);
+
+// Cosmo
+void ddx_cosmo_fill_guess(const void* ddx, void* state);
+void ddx_cosmo_solve(const void* ddx, void* state, int ncav, const double* phi,
+                     double tol);
+void ddx_cosmo_adjoint(const void* ddx, void* state, int nbasis, int nsph,
+                       const double* psi, double tol);
+void ddx_cosmo_forces(const void* ddx, void* state, int nbasis, int nsph, int ncav,
+                      const double* phi, const double* gradphi, const double* psi,
+                      double* forces);
+
+// PCM
+void ddx_pcm_fill_guess(const void* ddx, void* state);
+void ddx_pcm_solve(const void* ddx, void* state, int ncav, const double* phi, double tol);
+void ddx_pcm_adjoint(const void* ddx, void* state, int nbasis, int nsph,
+                     const double* psi, double tol);
+void ddx_pcm_forces(const void* ddx, void* state, int nbasis, int nsph, int ncav,
+                    const double* phi, const double* gradphi, const double* psi,
+                    double* forces);
+
+// LPB
+// TODO
 
 #ifdef __cplusplus
 }
