@@ -8,11 +8,8 @@ var structddx__parameters_1_1ddx__params__type =
     [ "se", "structddx__parameters_1_1ddx__params__type.html#a3d1b4ea5f5d59a994f9cdb1047f58dfb", null ],
     [ "lmax", "structddx__parameters_1_1ddx__params__type.html#a8e2ce496c887282074254c263edd2bf1", null ],
     [ "ngrid", "structddx__parameters_1_1ddx__params__type.html#a162bbb6f6255777ec97ca6bc00b3b0a0", null ],
-    [ "itersolver", "structddx__parameters_1_1ddx__params__type.html#a4be7dd4db40f62137b3c79c875ed0582", null ],
     [ "maxiter", "structddx__parameters_1_1ddx__params__type.html#a144db6ae7b0003dc11d822b59df51fbf", null ],
     [ "jacobi_ndiis", "structddx__parameters_1_1ddx__params__type.html#ab5e2812004c30ce302f6c0cb4d9c6426", null ],
-    [ "gmresr_j", "structddx__parameters_1_1ddx__params__type.html#afd7788e66709265e61de3f659fafdb24", null ],
-    [ "gmresr_dim", "structddx__parameters_1_1ddx__params__type.html#a1e55d2c520260179672519557151ffff", null ],
     [ "fmm", "structddx__parameters_1_1ddx__params__type.html#ae371e5372cfe4451853cbca04e83813d", null ],
     [ "pm", "structddx__parameters_1_1ddx__params__type.html#a3345be5ea974b5e302e9cc3d83ce1940", null ],
     [ "pl", "structddx__parameters_1_1ddx__params__type.html#a397e9091585fe27187a2cbc72a63e737", null ],
@@ -25,5 +22,9 @@ var structddx__parameters_1_1ddx__params__type =
     [ "error_flag", "structddx__parameters_1_1ddx__params__type.html#a8f06c900e28484ed13ae3451e8649dfa", null ],
     [ "error_message", "structddx__parameters_1_1ddx__params__type.html#a3b61f56fc7c29be3f952c1cb1b98c49a", null ],
     [ "print_func", "structddx__parameters_1_1ddx__params__type.html#a0d0bc766c6012c19888e22174fd06beb", null ],
-    [ "matvecmem", "structddx__parameters_1_1ddx__params__type.html#aff335b17a4bd5435a7d7ef8ea618e19a", null ]
+    [ "matvecmem", "structddx__parameters_1_1ddx__params__type.html#aff335b17a4bd5435a7d7ef8ea618e19a", null ],
+    [ "output_filename", "structddx__parameters_1_1ddx__params__type.html#af4814958be9a90bfd2c6b338f4ec5ec2", null ],
+    [ "len_output_filename", "structddx__parameters_1_1ddx__params__type.html#afd9b77a7b4cc51a498df7e76ac89ba1b", null ],
+    [ "verbose", "structddx__parameters_1_1ddx__params__type.html#a1e4e35a45c9743c4fd01c22d72a51dc0", null ],
+    [ "iunit", "structddx__parameters_1_1ddx__params__type.html#a1ae55f771a5aacd6feaaad38155ccf07", null ]
 ];
