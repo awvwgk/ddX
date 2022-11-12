@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('label_run_as_standalone.html',''); ini
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Line number   </th><th class="markdownTableHeadNone">type   </th><th class="markdownTableHeadNone">description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">String   </td><td class="markdownTableBodyNone">Filename for Log-file where additional information about the convergence of the linear solver is saved, the void string '' means that no log-file is saved    </td></tr>
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">String   </td><td class="markdownTableBodyNone">Filename for Log-file where information about the convergence of the linear solver is saved, the void string '' means that no log-file is saved    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">Integer   </td><td class="markdownTableBodyNone">Number of OpenMP cores to be used    </td></tr>
 <tr class="markdownTableRowOdd">
@@ -114,9 +114,9 @@ $(document).ready(function(){initNavTree('label_run_as_standalone.html',''); ini
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">6   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Dielectric permittivity constant \(\varepsilon_s\) of the bulk solvent    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Shift \(s\) of the regularized characteristic function \(\chi_\eta\), range=[-1,1]    </td></tr>
+<td class="markdownTableBodyNone">7   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Shift \(s\) of the regularized characteristic function \(\chi_\eta\), range=[-1,1]. Recommended value: -1 for ddcosmo and 0 for ddpcm or ddplpb    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Regularization parameter \(\eta\) of the smoothing function \(\chi_\eta\), range=[0,1]    </td></tr>
+<td class="markdownTableBodyNone">8   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Regularization parameter \(\eta\) of the smoothing function \(\chi_\eta\), range=[0,1]. Recommended value: 0.1    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">9   </td><td class="markdownTableBodyNone">Float   </td><td class="markdownTableBodyNone">Debye Hückel parameter \(\kappa_s\) of the bulk solvent    </td></tr>
 <tr class="markdownTableRowEven">
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('label_run_as_standalone.html',''); ini
 <p ><b>Remarks:</b></p><ol type="1">
 <li>The order of the lines is essential</li>
 </ol>
-<p ><b>Example of an input file:</b> </p><div class="fragment"><div class="line">&#39;&#39;          ! Name of log-file for additional information</div>
+<p ><b>Example of an input file:</b> </p><div class="fragment"><div class="line">&#39;&#39;          ! Name of log-file for convergence history of the solvers </div>
 <div class="line">1           ! Number of OpenMP cores to be used</div>
 <div class="line">1           ! Specification of the model: 1 for COSMO, 2 for PCM and 3 for LPB</div>
 <div class="line">7           ! Maximal degree of modeling spherical harmonics</div>
