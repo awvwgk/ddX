@@ -25,8 +25,8 @@
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
 {text:"Related Pages",url:"pages.html"},
-{text:"Modules",url:"modules.html"},
-{text:"Modules",url:"namespaces.html",children:[
+{text:"API",url:"modules.html"},
+{text:"Fortran Modules",url:"namespaces.html",children:[
 {text:"Modules List",url:"namespaces.html"},
 {text:"Module Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html",children:[
@@ -61,6 +61,7 @@ var menudata={children:[
 {text:"j",url:"namespacemembers_func_j.html#index_j"},
 {text:"l",url:"namespacemembers_func_l.html#index_l"},
 {text:"m",url:"namespacemembers_func_m.html#index_m"},
+{text:"n",url:"namespacemembers_func_n.html#index_n"},
 {text:"p",url:"namespacemembers_func_p.html#index_p"},
 {text:"r",url:"namespacemembers_func_r.html#index_r"},
 {text:"t",url:"namespacemembers_func_t.html#index_t"},
@@ -124,5 +125,9 @@ var menudata={children:[
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Functions/Subroutines",url:"globals_func.html"}]}]}]}
+{text:"All",url:"globals.html",children:[
+{text:"d",url:"globals.html#index_d"},
+{text:"m",url:"globals.html#index_m"}]},
+{text:"Functions/Subroutines",url:"globals_func.html",children:[
+{text:"d",url:"globals_func.html#index_d"},
+{text:"m",url:"globals_func.html#index_m"}]}]}]}]}
