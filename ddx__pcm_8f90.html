@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ddx<span id="projectnumber">&#160;0.4.4</span>
+   <div id="projectname">ddx<span id="projectnumber">&#160;0.6.0</span>
    </div>
    <div id="projectbrief">Libary for domain-decomposition methods for polarizable continuum models</div>
   </td>
@@ -107,33 +107,30 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:gaac7e2eb04f8acc0b10a8aa7096d735e0"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gaac7e2eb04f8acc0b10a8aa7096d735e0">ddx_pcm::ddpcm</a> (params, constants, workspace, state, phi_cav, psi, tol, esolv, force)</td></tr>
-<tr class="memdesc:gaac7e2eb04f8acc0b10a8aa7096d735e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ddPCM solver  <a href="group___fortran__interface__ddpcm.html#gaac7e2eb04f8acc0b10a8aa7096d735e0">More...</a><br /></td></tr>
-<tr class="separator:gaac7e2eb04f8acc0b10a8aa7096d735e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa230a041e3ec99afe8e77a034aa1e209"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gaa230a041e3ec99afe8e77a034aa1e209">ddx_pcm::ddpcm_energy</a> (constants, state, esolv)</td></tr>
-<tr class="memdesc:gaa230a041e3ec99afe8e77a034aa1e209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the ddPCM energy.  <a href="group___fortran__interface__ddpcm.html#gaa230a041e3ec99afe8e77a034aa1e209">More...</a><br /></td></tr>
-<tr class="separator:gaa230a041e3ec99afe8e77a034aa1e209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga372f8ee7283b914b8e18cdb3fe191961"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga372f8ee7283b914b8e18cdb3fe191961">ddx_pcm::ddpcm_setup</a> (params, constants, workspace, state, phi_cav, psi)</td></tr>
-<tr class="memdesc:ga372f8ee7283b914b8e18cdb3fe191961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the potential at the cavity points, assemble the RHS for ddCOSMO or for ddPCM.  <a href="group___fortran__interface__ddpcm.html#ga372f8ee7283b914b8e18cdb3fe191961">More...</a><br /></td></tr>
-<tr class="separator:ga372f8ee7283b914b8e18cdb3fe191961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafcf10e5bf414f7bbb08631623e021ee8"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gafcf10e5bf414f7bbb08631623e021ee8">ddx_pcm::ddpcm_guess</a> (params, constants, workspace, state)</td></tr>
-<tr class="memdesc:gafcf10e5bf414f7bbb08631623e021ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a guess for the primal ddPCM linear system.  <a href="group___fortran__interface__ddpcm.html#gafcf10e5bf414f7bbb08631623e021ee8">More...</a><br /></td></tr>
-<tr class="separator:gafcf10e5bf414f7bbb08631623e021ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga19181358de0ded287e1e5426f11da2e5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga19181358de0ded287e1e5426f11da2e5">ddx_pcm::ddpcm_guess_adjoint</a> (params, constants, workspace, state)</td></tr>
-<tr class="memdesc:ga19181358de0ded287e1e5426f11da2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a guess for the adjoint ddPCM linear system.  <a href="group___fortran__interface__ddpcm.html#ga19181358de0ded287e1e5426f11da2e5">More...</a><br /></td></tr>
-<tr class="separator:ga19181358de0ded287e1e5426f11da2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad1df8961dc4af2e658ebab9510c2807"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gaad1df8961dc4af2e658ebab9510c2807">ddx_pcm::ddpcm_solve</a> (params, constants, workspace, state, tol)</td></tr>
-<tr class="memdesc:gaad1df8961dc4af2e658ebab9510c2807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the ddPCM primal linear system.  <a href="group___fortran__interface__ddpcm.html#gaad1df8961dc4af2e658ebab9510c2807">More...</a><br /></td></tr>
-<tr class="separator:gaad1df8961dc4af2e658ebab9510c2807"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga39d2a1ee8cb28f8a12bbbb023a66ccf2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga39d2a1ee8cb28f8a12bbbb023a66ccf2">ddx_pcm::ddpcm_solve_adjoint</a> (params, constants, workspace, state, tol)</td></tr>
-<tr class="memdesc:ga39d2a1ee8cb28f8a12bbbb023a66ccf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the ddPCM adjpint linear system.  <a href="group___fortran__interface__ddpcm.html#ga39d2a1ee8cb28f8a12bbbb023a66ccf2">More...</a><br /></td></tr>
-<tr class="separator:ga39d2a1ee8cb28f8a12bbbb023a66ccf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae5bf3638d2a8c2ffd89f551fffe38814"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gae5bf3638d2a8c2ffd89f551fffe38814">ddx_pcm::ddpcm_solvation_force_terms</a> (params, constants, workspace, state, force)</td></tr>
-<tr class="memdesc:gae5bf3638d2a8c2ffd89f551fffe38814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the solvation contribution to the ddPCM forces.  <a href="group___fortran__interface__ddpcm.html#gae5bf3638d2a8c2ffd89f551fffe38814">More...</a><br /></td></tr>
-<tr class="separator:gae5bf3638d2a8c2ffd89f551fffe38814"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac26eb8d7859f50cdf2885ba6a516110b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__pcm.html#ac26eb8d7859f50cdf2885ba6a516110b">ddx_pcm::ddpcm_derivative_setup</a> (params, constants, workspace, state)</td></tr>
-<tr class="memdesc:ac26eb8d7859f50cdf2885ba6a516110b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This routines precomputes the intermediates to be used in the evaluation of ddCOSMO analytical derivatives.  <a href="namespaceddx__pcm.html#ac26eb8d7859f50cdf2885ba6a516110b">More...</a><br /></td></tr>
-<tr class="separator:ac26eb8d7859f50cdf2885ba6a516110b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61f82b7dae6ad94468a6783899dd20f9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga61f82b7dae6ad94468a6783899dd20f9">ddx_pcm::pcm_energy</a> (constants, state, esolv, ddx_error)</td></tr>
+<tr class="memdesc:ga61f82b7dae6ad94468a6783899dd20f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the ddPCM energy.  <a href="group___fortran__interface__ddpcm.html#ga61f82b7dae6ad94468a6783899dd20f9">More...</a><br /></td></tr>
+<tr class="separator:ga61f82b7dae6ad94468a6783899dd20f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga136e885c45445d1a89e27ba92d4db5bc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga136e885c45445d1a89e27ba92d4db5bc">ddx_pcm::pcm_setup</a> (params, constants, workspace, state, phi_cav, psi, ddx_error)</td></tr>
+<tr class="memdesc:ga136e885c45445d1a89e27ba92d4db5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the potential at the cavity points, assemble the RHS for ddCOSMO or for ddPCM.  <a href="group___fortran__interface__ddpcm.html#ga136e885c45445d1a89e27ba92d4db5bc">More...</a><br /></td></tr>
+<tr class="separator:ga136e885c45445d1a89e27ba92d4db5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga276e83f4c79d0e92ea826ed655a6e2a9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#ga276e83f4c79d0e92ea826ed655a6e2a9">ddx_pcm::pcm_guess</a> (params, constants, workspace, state, ddx_error)</td></tr>
+<tr class="memdesc:ga276e83f4c79d0e92ea826ed655a6e2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a guess for the primal ddPCM linear system.  <a href="group___fortran__interface__ddpcm.html#ga276e83f4c79d0e92ea826ed655a6e2a9">More...</a><br /></td></tr>
+<tr class="separator:ga276e83f4c79d0e92ea826ed655a6e2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf88e35711a522c4ca73324069eb0c273"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gaf88e35711a522c4ca73324069eb0c273">ddx_pcm::pcm_guess_adjoint</a> (params, constants, workspace, state, ddx_error)</td></tr>
+<tr class="memdesc:gaf88e35711a522c4ca73324069eb0c273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a guess for the adjoint ddPCM linear system.  <a href="group___fortran__interface__ddpcm.html#gaf88e35711a522c4ca73324069eb0c273">More...</a><br /></td></tr>
+<tr class="separator:gaf88e35711a522c4ca73324069eb0c273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad637fa0ab7f029fa024ea9145bde470b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gad637fa0ab7f029fa024ea9145bde470b">ddx_pcm::pcm_solve</a> (params, constants, workspace, state, tol, ddx_error)</td></tr>
+<tr class="memdesc:gad637fa0ab7f029fa024ea9145bde470b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the ddPCM primal linear system.  <a href="group___fortran__interface__ddpcm.html#gad637fa0ab7f029fa024ea9145bde470b">More...</a><br /></td></tr>
+<tr class="separator:gad637fa0ab7f029fa024ea9145bde470b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5d37f364b958f3af2c5a929768cb500"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gae5d37f364b958f3af2c5a929768cb500">ddx_pcm::pcm_solve_adjoint</a> (params, constants, workspace, state, tol, ddx_error)</td></tr>
+<tr class="memdesc:gae5d37f364b958f3af2c5a929768cb500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve the ddPCM adjpint linear system.  <a href="group___fortran__interface__ddpcm.html#gae5d37f364b958f3af2c5a929768cb500">More...</a><br /></td></tr>
+<tr class="separator:gae5d37f364b958f3af2c5a929768cb500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd28a2ce06e97bc32d5dc6c0e01160bb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__ddpcm.html#gabd28a2ce06e97bc32d5dc6c0e01160bb">ddx_pcm::pcm_solvation_force_terms</a> (params, constants, workspace, state, e_cav, force, ddx_error)</td></tr>
+<tr class="memdesc:gabd28a2ce06e97bc32d5dc6c0e01160bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the solvation contribution to the ddPCM forces.  <a href="group___fortran__interface__ddpcm.html#gabd28a2ce06e97bc32d5dc6c0e01160bb">More...</a><br /></td></tr>
+<tr class="separator:gabd28a2ce06e97bc32d5dc6c0e01160bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55bd385ab5da7c223b61c0df59573897"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__pcm.html#a55bd385ab5da7c223b61c0df59573897">ddx_pcm::pcm_derivative_setup</a> (params, constants, workspace, state)</td></tr>
+<tr class="memdesc:a55bd385ab5da7c223b61c0df59573897"><td class="mdescLeft">&#160;</td><td class="mdescRight">This routines precomputes the intermediates to be used in the evaluation of ddCOSMO analytical derivatives.  <a href="namespaceddx__pcm.html#a55bd385ab5da7c223b61c0df59573897">More...</a><br /></td></tr>
+<tr class="separator:a55bd385ab5da7c223b61c0df59573897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>(c) 2020-2021 RWTH Aachen. All rights reserved.</dd></dl>

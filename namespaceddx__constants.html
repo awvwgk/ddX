@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ddx<span id="projectnumber">&#160;0.4.4</span>
+   <div id="projectname">ddx<span id="projectnumber">&#160;0.6.0</span>
    </div>
    <div id="projectbrief">Libary for domain-decomposition methods for polarizable continuum models</div>
   </td>
@@ -108,60 +108,106 @@ Data Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:ga0626fee102a925150895c91c0ec014cf"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#ga0626fee102a925150895c91c0ec014cf">constants_init</a> (params, constants)</td></tr>
-<tr class="memdesc:ga0626fee102a925150895c91c0ec014cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute all necessary constants.  <a href="group___fortran__interface__core.html#ga0626fee102a925150895c91c0ec014cf">More...</a><br /></td></tr>
-<tr class="separator:ga0626fee102a925150895c91c0ec014cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f7e9e3cf53501601684b98199d97eb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#ac2f7e9e3cf53501601684b98199d97eb">build_itrnl</a> (constants, params)</td></tr>
-<tr class="memdesc:ac2f7e9e3cf53501601684b98199d97eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the transposed neighbor list.  <a href="namespaceddx__constants.html#ac2f7e9e3cf53501601684b98199d97eb">More...</a><br /></td></tr>
-<tr class="separator:ac2f7e9e3cf53501601684b98199d97eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82cd03b034a0452e6ca6a495408fed03"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a82cd03b034a0452e6ca6a495408fed03">build_l</a> (constants, params)</td></tr>
-<tr class="memdesc:a82cd03b034a0452e6ca6a495408fed03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and build the ddCOSMO sparse matrix, only if incore is set.  <a href="namespaceddx__constants.html#a82cd03b034a0452e6ca6a495408fed03">More...</a><br /></td></tr>
-<tr class="separator:a82cd03b034a0452e6ca6a495408fed03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a224edbeb3786b8d69a5dbbe6856a0df1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a224edbeb3786b8d69a5dbbe6856a0df1">build_b</a> (constants, params)</td></tr>
-<tr class="memdesc:a224edbeb3786b8d69a5dbbe6856a0df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and build the HSP sparse matrix, only if incore is set.  <a href="namespaceddx__constants.html#a224edbeb3786b8d69a5dbbe6856a0df1">More...</a><br /></td></tr>
-<tr class="separator:a224edbeb3786b8d69a5dbbe6856a0df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e92b4f30453727bdb2f9ba7b6faae9b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a6e92b4f30453727bdb2f9ba7b6faae9b">constants_init</a> (params, constants, ddx_error)</td></tr>
+<tr class="memdesc:a6e92b4f30453727bdb2f9ba7b6faae9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute all necessary constants.  <a href="namespaceddx__constants.html#a6e92b4f30453727bdb2f9ba7b6faae9b">More...</a><br /></td></tr>
+<tr class="separator:a6e92b4f30453727bdb2f9ba7b6faae9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23c5f32bf10f2cef9efb98249d23af15"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a23c5f32bf10f2cef9efb98249d23af15">build_itrnl</a> (constants, params, ddx_error)</td></tr>
+<tr class="memdesc:a23c5f32bf10f2cef9efb98249d23af15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the transposed neighbor list.  <a href="namespaceddx__constants.html#a23c5f32bf10f2cef9efb98249d23af15">More...</a><br /></td></tr>
+<tr class="separator:a23c5f32bf10f2cef9efb98249d23af15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc82a98de791c899b8a5853d26048fa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a4bc82a98de791c899b8a5853d26048fa">build_l</a> (constants, params, ddx_error)</td></tr>
+<tr class="memdesc:a4bc82a98de791c899b8a5853d26048fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and build the ddCOSMO sparse matrix, only if incore is set.  <a href="namespaceddx__constants.html#a4bc82a98de791c899b8a5853d26048fa">More...</a><br /></td></tr>
+<tr class="separator:a4bc82a98de791c899b8a5853d26048fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c17b7de5b75b3123c33fb48da2017d2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a2c17b7de5b75b3123c33fb48da2017d2">build_b</a> (constants, params, ddx_error)</td></tr>
+<tr class="memdesc:a2c17b7de5b75b3123c33fb48da2017d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate and build the HSP sparse matrix, only if incore is set.  <a href="namespaceddx__constants.html#a2c17b7de5b75b3123c33fb48da2017d2">More...</a><br /></td></tr>
+<tr class="separator:a2c17b7de5b75b3123c33fb48da2017d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5826bc847008b2eb36949c6b05b3e5d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#af5826bc847008b2eb36949c6b05b3e5d">mkpmat</a> (params, constants, isph, pmat)</td></tr>
 <tr class="memdesc:af5826bc847008b2eb36949c6b05b3e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computation of P_chi.  <a href="namespaceddx__constants.html#af5826bc847008b2eb36949c6b05b3e5d">More...</a><br /></td></tr>
 <tr class="separator:af5826bc847008b2eb36949c6b05b3e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80200d281b336be4a46d6a7a814ac68f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a80200d281b336be4a46d6a7a814ac68f">constants_geometry_init</a> (params, constants)</td></tr>
-<tr class="memdesc:a80200d281b336be4a46d6a7a814ac68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize geometry-related constants like list of neighbouring spheres.  <a href="namespaceddx__constants.html#a80200d281b336be4a46d6a7a814ac68f">More...</a><br /></td></tr>
-<tr class="separator:a80200d281b336be4a46d6a7a814ac68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e10536476b0d3169af304c60e915c5"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#aa5e10536476b0d3169af304c60e915c5">neighbor_list_init</a> (params, constants)</td></tr>
-<tr class="memdesc:aa5e10536476b0d3169af304c60e915c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the neighbor list using a N^2 code.  <a href="namespaceddx__constants.html#aa5e10536476b0d3169af304c60e915c5">More...</a><br /></td></tr>
-<tr class="separator:aa5e10536476b0d3169af304c60e915c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39690fd2a69ba9e97b60f95a80c039d1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a39690fd2a69ba9e97b60f95a80c039d1">neighbor_list_init_fmm</a> (params, constants)</td></tr>
-<tr class="memdesc:a39690fd2a69ba9e97b60f95a80c039d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the neighbor list using a linear scaling code (only if FMMs are enabled)  <a href="namespaceddx__constants.html#a39690fd2a69ba9e97b60f95a80c039d1">More...</a><br /></td></tr>
-<tr class="separator:a39690fd2a69ba9e97b60f95a80c039d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94adb04b3b8d45127c71d5b60d9de6f1"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a94adb04b3b8d45127c71d5b60d9de6f1">constants_geometry_init</a> (params, constants, ddx_error)</td></tr>
+<tr class="memdesc:a94adb04b3b8d45127c71d5b60d9de6f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize geometry-related constants like list of neighbouring spheres.  <a href="namespaceddx__constants.html#a94adb04b3b8d45127c71d5b60d9de6f1">More...</a><br /></td></tr>
+<tr class="separator:a94adb04b3b8d45127c71d5b60d9de6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f00ff09bdd03bfcb77c12678b088aac"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a3f00ff09bdd03bfcb77c12678b088aac">neighbor_list_init</a> (params, constants, ddx_error)</td></tr>
+<tr class="memdesc:a3f00ff09bdd03bfcb77c12678b088aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the neighbor list using a N^2 code.  <a href="namespaceddx__constants.html#a3f00ff09bdd03bfcb77c12678b088aac">More...</a><br /></td></tr>
+<tr class="separator:a3f00ff09bdd03bfcb77c12678b088aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75e67c88896a03e0463dbc1518b3ace9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a75e67c88896a03e0463dbc1518b3ace9">neighbor_list_init_fmm</a> (params, constants, ddx_error)</td></tr>
+<tr class="memdesc:a75e67c88896a03e0463dbc1518b3ace9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the neighbor list using a linear scaling code (only if FMMs are enabled)  <a href="namespaceddx__constants.html#a75e67c88896a03e0463dbc1518b3ace9">More...</a><br /></td></tr>
+<tr class="separator:a75e67c88896a03e0463dbc1518b3ace9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb0c060445e3b2d40b770eda26d20fdb"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#abb0c060445e3b2d40b770eda26d20fdb">fsw</a> (t, se, eta)</td></tr>
 <tr class="memdesc:abb0c060445e3b2d40b770eda26d20fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switching function.  <a href="namespaceddx__constants.html#abb0c060445e3b2d40b770eda26d20fdb">More...</a><br /></td></tr>
 <tr class="separator:abb0c060445e3b2d40b770eda26d20fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66fd73de84672f0f78f4c9c4e2c620b5"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a66fd73de84672f0f78f4c9c4e2c620b5">dfsw</a> (t, se, eta)</td></tr>
 <tr class="memdesc:a66fd73de84672f0f78f4c9c4e2c620b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative of a switching function.  <a href="namespaceddx__constants.html#a66fd73de84672f0f78f4c9c4e2c620b5">More...</a><br /></td></tr>
 <tr class="separator:a66fd73de84672f0f78f4c9c4e2c620b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d1fc3f2c16984ceaa0e1ed9de8fb548"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a5d1fc3f2c16984ceaa0e1ed9de8fb548">mkprec</a> (lmax, nbasis, nsph, ngrid, eps, ui, wgrid, vgrid, vgrid_nbasis, rx_prc, info, error_message)</td></tr>
-<tr class="memdesc:a5d1fc3f2c16984ceaa0e1ed9de8fb548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute preconditioner.  <a href="namespaceddx__constants.html#a5d1fc3f2c16984ceaa0e1ed9de8fb548">More...</a><br /></td></tr>
-<tr class="separator:a5d1fc3f2c16984ceaa0e1ed9de8fb548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ecabcc593500b5b2aad543f4edf890a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a5ecabcc593500b5b2aad543f4edf890a">tree_rib_build</a> (nsph, csph, rsph, order, cluster, children, parent, cnode, rnode, snode, error_message, error_flag)</td></tr>
-<tr class="memdesc:a5ecabcc593500b5b2aad543f4edf890a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a recursive inertial binary tree.  <a href="namespaceddx__constants.html#a5ecabcc593500b5b2aad543f4edf890a">More...</a><br /></td></tr>
-<tr class="separator:a5ecabcc593500b5b2aad543f4edf890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22afda469241a635a1ca4f986cbda2b6"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a22afda469241a635a1ca4f986cbda2b6">tree_rib_node_bisect</a> (nsph, csph, n, order, div, error_message, error_flag)</td></tr>
-<tr class="memdesc:a22afda469241a635a1ca4f986cbda2b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide given cluster of spheres into two subclusters by inertial bisection.  <a href="namespaceddx__constants.html#a22afda469241a635a1ca4f986cbda2b6">More...</a><br /></td></tr>
-<tr class="separator:a22afda469241a635a1ca4f986cbda2b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42e14753989ec5f572237370884dc57e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a42e14753989ec5f572237370884dc57e">mkprec</a> (lmax, nbasis, nsph, ngrid, eps, ui, wgrid, vgrid, vgrid_nbasis, rx_prc, ddx_error)</td></tr>
+<tr class="memdesc:a42e14753989ec5f572237370884dc57e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute preconditioner assemble the diagonal blocks of the reps matrix then invert them to build the preconditioner.  <a href="namespaceddx__constants.html#a42e14753989ec5f572237370884dc57e">More...</a><br /></td></tr>
+<tr class="separator:a42e14753989ec5f572237370884dc57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5425f991454fc8f92fd24f1577212a4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#ab5425f991454fc8f92fd24f1577212a4">tree_rib_build</a> (nsph, csph, rsph, order, cluster, children, parent, cnode, rnode, snode, ddx_error)</td></tr>
+<tr class="memdesc:ab5425f991454fc8f92fd24f1577212a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build a recursive inertial binary tree.  <a href="namespaceddx__constants.html#ab5425f991454fc8f92fd24f1577212a4">More...</a><br /></td></tr>
+<tr class="separator:ab5425f991454fc8f92fd24f1577212a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7f84bf2e8fe2a577dfbc403fb174c8a"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#ad7f84bf2e8fe2a577dfbc403fb174c8a">tree_rib_node_bisect</a> (nsph, csph, n, order, div, ddx_error)</td></tr>
+<tr class="memdesc:ad7f84bf2e8fe2a577dfbc403fb174c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divide given cluster of spheres into two subclusters by inertial bisection.  <a href="namespaceddx__constants.html#ad7f84bf2e8fe2a577dfbc403fb174c8a">More...</a><br /></td></tr>
+<tr class="separator:ad7f84bf2e8fe2a577dfbc403fb174c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e9f0301398a1007b912f94c7239dffd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a3e9f0301398a1007b912f94c7239dffd">tree_get_farnear_work</a> (n, children, cnode, rnode, lwork, iwork, jwork, work, nnfar, nfar, nnnear, nnear)</td></tr>
 <tr class="memdesc:a3e9f0301398a1007b912f94c7239dffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find near and far admissible pairs of tree nodes and store it in work array.  <a href="namespaceddx__constants.html#a3e9f0301398a1007b912f94c7239dffd">More...</a><br /></td></tr>
 <tr class="separator:a3e9f0301398a1007b912f94c7239dffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa4961d4e2731a6ade2dd395d00a87d9"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#afa4961d4e2731a6ade2dd395d00a87d9">tree_get_farnear</a> (jwork, lwork, work, n, nnfar, nfar, sfar, far, nnnear, nnear, snear, near)</td></tr>
 <tr class="memdesc:afa4961d4e2731a6ade2dd395d00a87d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get near and far admissible pairs from work array of tree_get_farnear_work Works only for binary tree.  <a href="namespaceddx__constants.html#afa4961d4e2731a6ade2dd395d00a87d9">More...</a><br /></td></tr>
 <tr class="separator:afa4961d4e2731a6ade2dd395d00a87d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga65f3cf548c509ced30d5d60418b4c766"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#ga65f3cf548c509ced30d5d60418b4c766">constants_free</a> (constants)</td></tr>
-<tr class="memdesc:ga65f3cf548c509ced30d5d60418b4c766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the constants.  <a href="group___fortran__interface__core.html#ga65f3cf548c509ced30d5d60418b4c766">More...</a><br /></td></tr>
-<tr class="separator:ga65f3cf548c509ced30d5d60418b4c766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97df3171ca5347f984551fe3a1bc7ed2"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__constants.html#a97df3171ca5347f984551fe3a1bc7ed2">constants_free</a> (constants, ddx_error)</td></tr>
+<tr class="memdesc:a97df3171ca5347f984551fe3a1bc7ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the constants.  <a href="namespaceddx__constants.html#a97df3171ca5347f984551fe3a1bc7ed2">More...</a><br /></td></tr>
+<tr class="separator:a97df3171ca5347f984551fe3a1bc7ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Run-time constants. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="ac2f7e9e3cf53501601684b98199d97eb" name="ac2f7e9e3cf53501601684b98199d97eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f7e9e3cf53501601684b98199d97eb">&#9670;&nbsp;</a></span>build_itrnl()</h2>
+<a id="a6e92b4f30453727bdb2f9ba7b6faae9b" name="a6e92b4f30453727bdb2f9ba7b6faae9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e92b4f30453727bdb2f9ba7b6faae9b">&#9670;&nbsp;</a></span>constants_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine ddx_constants::constants_init </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structddx__parameters_1_1ddx__params__type.html">ddx_params_type</a>), intent(in)&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__constants_1_1ddx__constants__type.html">ddx_constants_type</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>constants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compute all necessary constants. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">params</td><td>Object containing all inputs. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constants</td><td>Object containing all constants. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ddx_error</td><td>ddX error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00236">236</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+
+</div>
+</div>
+<a id="a23c5f32bf10f2cef9efb98249d23af15" name="a23c5f32bf10f2cef9efb98249d23af15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23c5f32bf10f2cef9efb98249d23af15">&#9670;&nbsp;</a></span>build_itrnl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +222,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__parameters_1_1ddx__params__type.html">ddx_params_type</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -188,12 +240,12 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Build the transposed neighbor list. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00553">553</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00555">555</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a82cd03b034a0452e6ca6a495408fed03" name="a82cd03b034a0452e6ca6a495408fed03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82cd03b034a0452e6ca6a495408fed03">&#9670;&nbsp;</a></span>build_l()</h2>
+<a id="a4bc82a98de791c899b8a5853d26048fa" name="a4bc82a98de791c899b8a5853d26048fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc82a98de791c899b8a5853d26048fa">&#9670;&nbsp;</a></span>build_l()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +260,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__parameters_1_1ddx__params__type.html">ddx_params_type</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,12 +278,12 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Allocate and build the ddCOSMO sparse matrix, only if incore is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00578">578</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00580">580</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a224edbeb3786b8d69a5dbbe6856a0df1" name="a224edbeb3786b8d69a5dbbe6856a0df1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a224edbeb3786b8d69a5dbbe6856a0df1">&#9670;&nbsp;</a></span>build_b()</h2>
+<a id="a2c17b7de5b75b3123c33fb48da2017d2" name="a2c17b7de5b75b3123c33fb48da2017d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c17b7de5b75b3123c33fb48da2017d2">&#9670;&nbsp;</a></span>build_b()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +298,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__parameters_1_1ddx__params__type.html">ddx_params_type</a>), intent(in)&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
+          <td class="paramname"><em>params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -252,7 +316,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Allocate and build the HSP sparse matrix, only if incore is set. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00646">646</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00648">648</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
@@ -295,20 +359,13 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computation of P_chi. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">isph</td><td>: Sphere number </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pmat</td><td>: Matrix of size nbasis X (lmax0+1)^2, Fixed lmax0 </td></tr>
-  </table>
-  </dd>
-</dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00720">720</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00723">723</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a80200d281b336be4a46d6a7a814ac68f" name="a80200d281b336be4a46d6a7a814ac68f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80200d281b336be4a46d6a7a814ac68f">&#9670;&nbsp;</a></span>constants_geometry_init()</h2>
+<a id="a94adb04b3b8d45127c71d5b60d9de6f1" name="a94adb04b3b8d45127c71d5b60d9de6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94adb04b3b8d45127c71d5b60d9de6f1">&#9670;&nbsp;</a></span>constants_geometry_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +380,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__constants_1_1ddx__constants__type.html">ddx_constants_type</a>), intent(inout)&#160;</td>
-          <td class="paramname"><em>constants</em>&#160;</td>
+          <td class="paramname"><em>constants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -334,21 +397,22 @@ Functions/Subroutines</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize geometry-related constants like list of neighbouring spheres. </p>
-<p >This routine does not check error state of params or constants as it is intended for a low-level use.</p>
+<p >This routine does not check ddx_error state of params or constants as it is intended for a low-level use.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">params</td><td>Object containing all inputs. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">constants</td><td>Object containing all constants. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ddx_error</td><td>ddX error </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00754">754</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l00759">759</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="aa5e10536476b0d3169af304c60e915c5" name="aa5e10536476b0d3169af304c60e915c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5e10536476b0d3169af304c60e915c5">&#9670;&nbsp;</a></span>neighbor_list_init()</h2>
+<a id="a3f00ff09bdd03bfcb77c12678b088aac" name="a3f00ff09bdd03bfcb77c12678b088aac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f00ff09bdd03bfcb77c12678b088aac">&#9670;&nbsp;</a></span>neighbor_list_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +427,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__constants_1_1ddx__constants__type.html">ddx_constants_type</a>), intent(inout)&#160;</td>
-          <td class="paramname"><em>constants</em>&#160;</td>
+          <td class="paramname"><em>constants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -375,12 +445,12 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Build the neighbor list using a N^2 code. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01073">1073</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01062">1062</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a39690fd2a69ba9e97b60f95a80c039d1" name="a39690fd2a69ba9e97b60f95a80c039d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39690fd2a69ba9e97b60f95a80c039d1">&#9670;&nbsp;</a></span>neighbor_list_init_fmm()</h2>
+<a id="a75e67c88896a03e0463dbc1518b3ace9" name="a75e67c88896a03e0463dbc1518b3ace9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e67c88896a03e0463dbc1518b3ace9">&#9670;&nbsp;</a></span>neighbor_list_init_fmm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +465,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">type(<a class="el" href="structddx__constants_1_1ddx__constants__type.html">ddx_constants_type</a>), intent(inout)&#160;</td>
-          <td class="paramname"><em>constants</em>&#160;</td>
+          <td class="paramname"><em>constants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -407,7 +483,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Build the neighbor list using a linear scaling code (only if FMMs are enabled) </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01158">1158</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01143">1143</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
@@ -467,7 +543,7 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01275">1275</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01256">1256</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
@@ -526,12 +602,12 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01330">1330</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01311">1311</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a5d1fc3f2c16984ceaa0e1ed9de8fb548" name="a5d1fc3f2c16984ceaa0e1ed9de8fb548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d1fc3f2c16984ceaa0e1ed9de8fb548">&#9670;&nbsp;</a></span>mkprec()</h2>
+<a id="a42e14753989ec5f572237370884dc57e" name="a42e14753989ec5f572237370884dc57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42e14753989ec5f572237370884dc57e">&#9670;&nbsp;</a></span>mkprec()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -599,14 +675,8 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">integer, intent(out)&#160;</td>
-          <td class="paramname"><em>info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">character(len=255), intent(out)&#160;</td>
-          <td class="paramname"><em>error_message</em>&#160;</td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -616,15 +686,14 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Compute preconditioner. </p>
-<p >assemble the diagonal blocks of the reps matrix then invert them to build the preconditioner </p>
+<p>Compute preconditioner assemble the diagonal blocks of the reps matrix then invert them to build the preconditioner. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01357">1357</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01337">1337</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a5ecabcc593500b5b2aad543f4edf890a" name="a5ecabcc593500b5b2aad543f4edf890a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ecabcc593500b5b2aad543f4edf890a">&#9670;&nbsp;</a></span>tree_rib_build()</h2>
+<a id="ab5425f991454fc8f92fd24f1577212a4" name="ab5425f991454fc8f92fd24f1577212a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5425f991454fc8f92fd24f1577212a4">&#9670;&nbsp;</a></span>tree_rib_build()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -692,14 +761,8 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(len=255), intent(out)&#160;</td>
-          <td class="paramname"><em>error_message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(out)&#160;</td>
-          <td class="paramname"><em>error_flag</em>&#160;</td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -723,16 +786,17 @@ Functions/Subroutines</h2></td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">cnode</td><td>Center of a bounding sphere of each node </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">rnode</td><td>Radius of a bounding sphere of each node </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">snode</td><td>Array of leaf nodes containing input spheres </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ddx_error</td><td>ddX error </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01453">1453</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01428">1428</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
-<a id="a22afda469241a635a1ca4f986cbda2b6" name="a22afda469241a635a1ca4f986cbda2b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22afda469241a635a1ca4f986cbda2b6">&#9670;&nbsp;</a></span>tree_rib_node_bisect()</h2>
+<a id="ad7f84bf2e8fe2a577dfbc403fb174c8a" name="ad7f84bf2e8fe2a577dfbc403fb174c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7f84bf2e8fe2a577dfbc403fb174c8a">&#9670;&nbsp;</a></span>tree_rib_node_bisect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -770,14 +834,8 @@ Functions/Subroutines</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(len=255), intent(out)&#160;</td>
-          <td class="paramname"><em>error_message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(out)&#160;</td>
-          <td class="paramname"><em>error_flag</em>&#160;</td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -795,11 +853,12 @@ Functions/Subroutines</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Number of spheres in a given cluster </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">order</td><td>Indexes of spheres in a given cluster. On exit, indexes <code>order(1:div)</code> correspond to the first subcluster and indexes <code>order(div+1:n)</code> correspond to the second subcluster. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">div</td><td>Break point of <code>order</code> array between two clusters. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ddx_error</td><td>ddX error </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01576">1576</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01555">1555</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
@@ -908,7 +967,7 @@ Functions/Subroutines</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01691">1691</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01663">1663</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1059,46 @@ Functions/Subroutines</h2></td></tr>
 
 <p>Get near and far admissible pairs from work array of tree_get_farnear_work Works only for binary tree. </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01784">1784</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01756">1756</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
+
+</div>
+</div>
+<a id="a97df3171ca5347f984551fe3a1bc7ed2" name="a97df3171ca5347f984551fe3a1bc7ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97df3171ca5347f984551fe3a1bc7ed2">&#9670;&nbsp;</a></span>constants_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine ddx_constants::constants_free </td>
+          <td>(</td>
+          <td class="paramtype">type(<a class="el" href="structddx__constants_1_1ddx__constants__type.html">ddx_constants_type</a>), intent(out)&#160;</td>
+          <td class="paramname"><em>constants</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">type(<a class="el" href="structddx__errors_1_1ddx__error__type.html">ddx_error_type</a>), intent(inout)&#160;</td>
+          <td class="paramname"><em>ddx_error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deallocate the constants. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">constants</td><td>Precomputed constants </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ddx_error</td><td>ddX error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ddx__constants_8f90_source.html#l01815">1815</a> of file <a class="el" href="ddx__constants_8f90_source.html">ddx_constants.f90</a>.</p>
 
 </div>
 </div>

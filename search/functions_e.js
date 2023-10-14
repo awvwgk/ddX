@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['repsstarx_0',['repsstarx',['../namespaceddx__operators.html#a0670b7a7bd830dd57ee0dc2dbcb80b1a',1,'ddx_operators']]],
-  ['repsx_1',['repsx',['../namespaceddx__operators.html#ace05a424bd4e0a226b635723aba4389c',1,'ddx_operators']]],
-  ['rinfx_2',['rinfx',['../namespaceddx__operators.html#ad322bb8c91dfbed143be683333be9430',1,'ddx_operators']]],
+  ['repsstarx_0',['repsstarx',['../namespaceddx__operators.html#abafd888764d5d9c2766cc8c02ece4d71',1,'ddx_operators']]],
+  ['repsx_1',['repsx',['../namespaceddx__operators.html#a18786bfef5d4396d7ae7c4ede10c758a',1,'ddx_operators']]],
+  ['rinfx_2',['rinfx',['../namespaceddx__operators.html#a64673298c1d57595bfc799245b1d77e7',1,'ddx_operators']]],
   ['rmsvec_3',['rmsvec',['../namespaceddx__core.html#a4dcabcd0c6fe4d601c5a739d8d1bf86c',1,'ddx_core']]],
-  ['rstarinfx_4',['rstarinfx',['../namespaceddx__operators.html#a9c02c21086e56924eec13cc33a96eebb',1,'ddx_operators']]]
+  ['rstarinfx_4',['rstarinfx',['../namespaceddx__operators.html#af3464d96a98bcce0b2477aff26596531',1,'ddx_operators']]]
 ];

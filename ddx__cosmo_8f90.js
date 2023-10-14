@@ -1,12 +1,11 @@
 var ddx__cosmo_8f90 =
 [
-    [ "ddcosmo", "ddx__cosmo_8f90.html#ga7c83eee1200de86e45846ae434a5236a", null ],
-    [ "ddcosmo_energy", "ddx__cosmo_8f90.html#ga00df0d8f18848c101a4b321a0d4dc1ac", null ],
-    [ "ddcosmo_setup", "ddx__cosmo_8f90.html#ga501c58483a775fe4829bb94d7155f4f1", null ],
-    [ "ddcosmo_guess", "ddx__cosmo_8f90.html#ga19e04e21fa4063a92520a59cc2f316b9", null ],
-    [ "ddcosmo_guess_adjoint", "ddx__cosmo_8f90.html#ga7c10125a1107726da4c18e90d20dff1e", null ],
-    [ "ddcosmo_solve", "ddx__cosmo_8f90.html#ga8437b9aa1205fce64eb67c376293a673", null ],
-    [ "ddcosmo_solve_adjoint", "ddx__cosmo_8f90.html#ga997081b4362a37c671d1b0668acda3e3", null ],
-    [ "ddcosmo_solvation_force_terms", "ddx__cosmo_8f90.html#ga82f05cf5eee50c7bb50b3f542c3222fe", null ],
-    [ "ddcosmo_derivative_setup", "ddx__cosmo_8f90.html#a98f054f224e5a703e765830c76fbb713", null ]
+    [ "cosmo_energy", "ddx__cosmo_8f90.html#gafeb32d02c6726b28a34ba199031e22cb", null ],
+    [ "cosmo_setup", "ddx__cosmo_8f90.html#gadb1e01e243d4696fc919a35ab41322f9", null ],
+    [ "cosmo_guess", "ddx__cosmo_8f90.html#ga18461c11c6299282db1702e944a169ef", null ],
+    [ "cosmo_guess_adjoint", "ddx__cosmo_8f90.html#gaf6fc754d4a6913bd5f86b6d341dd46df", null ],
+    [ "cosmo_solve", "ddx__cosmo_8f90.html#ga2aebea0b604a04c734989304a94a1b31", null ],
+    [ "cosmo_solve_adjoint", "ddx__cosmo_8f90.html#ga306988a6c78972f73d3682299092b0b7", null ],
+    [ "cosmo_solvation_force_terms", "ddx__cosmo_8f90.html#ga8e423e077764cda1d5845bc92155bd3a", null ],
+    [ "cosmo_derivative_setup", "ddx__cosmo_8f90.html#a50ff9ab9cd9522a209d6bc5d4edd079f", null ]
 ];

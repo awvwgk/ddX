@@ -1,11 +1,11 @@
 var group___fortran__interface__ddpcm =
 [
-    [ "ddx_pcm::ddpcm", "group___fortran__interface__ddpcm.html#gaac7e2eb04f8acc0b10a8aa7096d735e0", null ],
-    [ "ddx_pcm::ddpcm_energy", "group___fortran__interface__ddpcm.html#gaa230a041e3ec99afe8e77a034aa1e209", null ],
-    [ "ddx_pcm::ddpcm_setup", "group___fortran__interface__ddpcm.html#ga372f8ee7283b914b8e18cdb3fe191961", null ],
-    [ "ddx_pcm::ddpcm_guess", "group___fortran__interface__ddpcm.html#gafcf10e5bf414f7bbb08631623e021ee8", null ],
-    [ "ddx_pcm::ddpcm_guess_adjoint", "group___fortran__interface__ddpcm.html#ga19181358de0ded287e1e5426f11da2e5", null ],
-    [ "ddx_pcm::ddpcm_solve", "group___fortran__interface__ddpcm.html#gaad1df8961dc4af2e658ebab9510c2807", null ],
-    [ "ddx_pcm::ddpcm_solve_adjoint", "group___fortran__interface__ddpcm.html#ga39d2a1ee8cb28f8a12bbbb023a66ccf2", null ],
-    [ "ddx_pcm::ddpcm_solvation_force_terms", "group___fortran__interface__ddpcm.html#gae5bf3638d2a8c2ffd89f551fffe38814", null ]
+    [ "ddx_legacy::ddpcm", "group___fortran__interface__ddpcm.html#ga32c49f32abcf9f8c849016737cb7bcec", null ],
+    [ "ddx_pcm::pcm_energy", "group___fortran__interface__ddpcm.html#ga61f82b7dae6ad94468a6783899dd20f9", null ],
+    [ "ddx_pcm::pcm_setup", "group___fortran__interface__ddpcm.html#ga136e885c45445d1a89e27ba92d4db5bc", null ],
+    [ "ddx_pcm::pcm_guess", "group___fortran__interface__ddpcm.html#ga276e83f4c79d0e92ea826ed655a6e2a9", null ],
+    [ "ddx_pcm::pcm_guess_adjoint", "group___fortran__interface__ddpcm.html#gaf88e35711a522c4ca73324069eb0c273", null ],
+    [ "ddx_pcm::pcm_solve", "group___fortran__interface__ddpcm.html#gad637fa0ab7f029fa024ea9145bde470b", null ],
+    [ "ddx_pcm::pcm_solve_adjoint", "group___fortran__interface__ddpcm.html#gae5d37f364b958f3af2c5a929768cb500", null ],
+    [ "ddx_pcm::pcm_solvation_force_terms", "group___fortran__interface__ddpcm.html#gabd28a2ce06e97bc32d5dc6c0e01160bb", null ]
 ];

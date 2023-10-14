@@ -1,10 +1,10 @@
 var group___fortran__interface__ddlpb =
 [
-    [ "ddx_lpb::ddlpb_setup", "group___fortran__interface__ddlpb.html#gaa884b2e786a1b548e86a596c687ba936", null ],
-    [ "ddx_lpb::ddlpb_energy", "group___fortran__interface__ddlpb.html#gae6a311c69796cc676c576d376c0ee67f", null ],
-    [ "ddx_lpb::ddlpb_guess", "group___fortran__interface__ddlpb.html#ga67c5dfac741012e2843b013bfb473124", null ],
-    [ "ddx_lpb::ddlpb_guess_adjoint", "group___fortran__interface__ddlpb.html#gab02c9e07f910f841cbd2ed63d2d2aedf", null ],
-    [ "ddx_lpb::ddlpb_solve", "group___fortran__interface__ddlpb.html#gab9ab6f364ac3f17a7738936a54f89dad", null ],
-    [ "ddx_lpb::ddlpb_solve_adjoint", "group___fortran__interface__ddlpb.html#gaa23bd2b57bd92b0a641e0cde2b4d2e43", null ],
-    [ "ddx_lpb::ddlpb_solvation_force_terms", "group___fortran__interface__ddlpb.html#gafc4b0f021fd04b68148e20c4a380b419", null ]
+    [ "ddx_lpb::lpb_setup", "group___fortran__interface__ddlpb.html#ga3482b4176edb7b50c39c4e52a9754806", null ],
+    [ "ddx_lpb::lpb_energy", "group___fortran__interface__ddlpb.html#ga20f4d8fed3b3e6c0370ecaaeca0fb022", null ],
+    [ "ddx_lpb::lpb_guess", "group___fortran__interface__ddlpb.html#gab138248c70f32bcd9bb972b17c79e33f", null ],
+    [ "ddx_lpb::lpb_guess_adjoint", "group___fortran__interface__ddlpb.html#ga6f6926ed8ce5d43ddd842b8a13325692", null ],
+    [ "ddx_lpb::lpb_solve", "group___fortran__interface__ddlpb.html#ga15e1b585f9d25617da35fc4e775cd473", null ],
+    [ "ddx_lpb::lpb_solve_adjoint", "group___fortran__interface__ddlpb.html#ga552fdc9c3035b7e65faa70f462adc499", null ],
+    [ "ddx_lpb::lpb_solvation_force_terms", "group___fortran__interface__ddlpb.html#gafd51df109e2787fa770ba270aed9bbeb", null ]
 ];

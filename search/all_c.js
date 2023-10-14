@@ -9,9 +9,17 @@ var searchData=
   ['matvec_5finterface_6',['matvec_interface',['../interfaceddx__solvers_1_1matvec__interface.html',1,'ddx_solvers']]],
   ['matvec_5finterface_5fexternal_7',['matvec_interface_external',['../interfaceddx__solvers_1_1matvec__interface__external.html',1,'ddx_solvers']]],
   ['matvecmem_8',['matvecmem',['../structddx__parameters_1_1ddx__params__type.html#aff335b17a4bd5435a7d7ef8ea618e19a',1,'ddx_parameters::ddx_params_type']]],
-  ['maxiter_9',['maxiter',['../structddx__parameters_1_1ddx__params__type.html#a144db6ae7b0003dc11d822b59df51fbf',1,'ddx_parameters::ddx_params_type']]],
-  ['mkpmat_10',['mkpmat',['../namespaceddx__constants.html#af5826bc847008b2eb36949c6b05b3e5d',1,'ddx_constants']]],
-  ['mkprec_11',['mkprec',['../namespaceddx__constants.html#a5d1fc3f2c16984ceaa0e1ed9de8fb548',1,'ddx_constants']]],
-  ['model_12',['model',['../structddx__parameters_1_1ddx__params__type.html#a1c894bf3f401534f58322ee913f205f4',1,'ddx_parameters::ddx_params_type']]],
-  ['model_5fstr_13',['model_str',['../namespaceddx__definitions.html#a27faa3db3323ba2c6427084fcbf7b953',1,'ddx_definitions']]]
+  ['max_5flength_9',['max_length',['../structddx__errors_1_1ddx__error__type.html#ac095f510feda5770f0cc6f72b3433f9c',1,'ddx_errors::ddx_error_type']]],
+  ['maxiter_10',['maxiter',['../structddx__parameters_1_1ddx__params__type.html#a144db6ae7b0003dc11d822b59df51fbf',1,'ddx_parameters::ddx_params_type']]],
+  ['mkpmat_11',['mkpmat',['../namespaceddx__constants.html#af5826bc847008b2eb36949c6b05b3e5d',1,'ddx_constants']]],
+  ['mkprec_12',['mkprec',['../namespaceddx__constants.html#a42e14753989ec5f572237370884dc57e',1,'ddx_constants']]],
+  ['mkrhs_13',['mkrhs',['../namespaceddx__legacy.html#aae5d5249fce08ad610ff745b4a865147',1,'ddx_legacy']]],
+  ['model_14',['model',['../structddx__parameters_1_1ddx__params__type.html#a1c894bf3f401534f58322ee913f205f4',1,'ddx_parameters::ddx_params_type']]],
+  ['model_5fstr_15',['model_str',['../namespaceddx__definitions.html#a27faa3db3323ba2c6427084fcbf7b953',1,'ddx_definitions']]],
+  ['multipole_5felectrostatics_16',['multipole_electrostatics',['../group___fortran__interface__multipolar.html#ga76c0d6f26b8522d58e4c8cd425d38386',1,'ddx_multipolar_solutes']]],
+  ['multipole_5felectrostatics_5f0_17',['multipole_electrostatics_0',['../namespaceddx__multipolar__solutes.html#abaf68ea18e2e61bde7758a85511eb188',1,'ddx_multipolar_solutes']]],
+  ['multipole_5felectrostatics_5f1_18',['multipole_electrostatics_1',['../namespaceddx__multipolar__solutes.html#af872cb85b16a19bd03eb44e9c636fec6',1,'ddx_multipolar_solutes']]],
+  ['multipole_5felectrostatics_5f2_19',['multipole_electrostatics_2',['../namespaceddx__multipolar__solutes.html#a6be0b71f98af8e709698769071f58eac',1,'ddx_multipolar_solutes']]],
+  ['multipole_5fforce_5fterms_20',['multipole_force_terms',['../group___fortran__interface__multipolar.html#ga9f368cd95af743ed341a78c5445c1ae1',1,'ddx_multipolar_solutes']]],
+  ['multipole_5fpsi_21',['multipole_psi',['../group___fortran__interface__multipolar.html#gab9f10b0657bf556a2cd1261a48088f46',1,'ddx_multipolar_solutes']]]
 ];

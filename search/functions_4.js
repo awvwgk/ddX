@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['efld_0',['efld',['../namespaceddx__core.html#a3c8789fc01ba244fdaa0d4fef8e9d725',1,'ddx_core']]]
+  ['energy_0',['energy',['../group___fortran__interface__core.html#ga69c9d37966ddad9960ce9f982a079ef6',1,'ddx']]]
 ];

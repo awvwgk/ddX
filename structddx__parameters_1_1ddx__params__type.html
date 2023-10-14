@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ddx<span id="projectnumber">&#160;0.4.4</span>
+   <div id="projectname">ddx<span id="projectnumber">&#160;0.6.0</span>
    </div>
    <div id="projectbrief">Libary for domain-decomposition methods for polarizable continuum models</div>
   </td>
@@ -156,12 +156,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9372351d69cecd8013f7bf9f93590fef"><td class="memItemLeft" align="right" valign="top">real(dp)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__parameters_1_1ddx__params__type.html#a9372351d69cecd8013f7bf9f93590fef">epsp</a> = 1.0_dp</td></tr>
 <tr class="memdesc:a9372351d69cecd8013f7bf9f93590fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dielectric permittivity of the cavity (used by ddLPB), hardcoded to one.  <a href="structddx__parameters_1_1ddx__params__type.html#a9372351d69cecd8013f7bf9f93590fef">More...</a><br /></td></tr>
 <tr class="separator:a9372351d69cecd8013f7bf9f93590fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f06c900e28484ed13ae3451e8649dfa"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__parameters_1_1ddx__params__type.html#a8f06c900e28484ed13ae3451e8649dfa">error_flag</a> = 2</td></tr>
-<tr class="memdesc:a8f06c900e28484ed13ae3451e8649dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error state. 0 in case of no error or 1 if there were errors and 2 if the object is not initialised.  <a href="structddx__parameters_1_1ddx__params__type.html#a8f06c900e28484ed13ae3451e8649dfa">More...</a><br /></td></tr>
-<tr class="separator:a8f06c900e28484ed13ae3451e8649dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b61f56fc7c29be3f952c1cb1b98c49a"><td class="memItemLeft" align="right" valign="top">character(len=255)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__parameters_1_1ddx__params__type.html#a3b61f56fc7c29be3f952c1cb1b98c49a">error_message</a></td></tr>
-<tr class="memdesc:a3b61f56fc7c29be3f952c1cb1b98c49a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last error message.  <a href="structddx__parameters_1_1ddx__params__type.html#a3b61f56fc7c29be3f952c1cb1b98c49a">More...</a><br /></td></tr>
-<tr class="separator:a3b61f56fc7c29be3f952c1cb1b98c49a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff335b17a4bd5435a7d7ef8ea618e19a"><td class="memItemLeft" align="right" valign="top">integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__parameters_1_1ddx__params__type.html#aff335b17a4bd5435a7d7ef8ea618e19a">matvecmem</a></td></tr>
 <tr class="memdesc:aff335b17a4bd5435a7d7ef8ea618e19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">integer matvecmem. Build hsp matrix to speed up matrix-vec product  <a href="structddx__parameters_1_1ddx__params__type.html#aff335b17a4bd5435a7d7ef8ea618e19a">More...</a><br /></td></tr>
 <tr class="separator:aff335b17a4bd5435a7d7ef8ea618e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -507,42 +501,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8f06c900e28484ed13ae3451e8649dfa" name="a8f06c900e28484ed13ae3451e8649dfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f06c900e28484ed13ae3451e8649dfa">&#9670;&nbsp;</a></span>error_flag</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">integer ddx_parameters::ddx_params_type::error_flag = 2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Error state. 0 in case of no error or 1 if there were errors and 2 if the object is not initialised. </p>
-
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00069">69</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
-
-</div>
-</div>
-<a id="a3b61f56fc7c29be3f952c1cb1b98c49a" name="a3b61f56fc7c29be3f952c1cb1b98c49a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b61f56fc7c29be3f952c1cb1b98c49a">&#9670;&nbsp;</a></span>error_message</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">character(len=255) ddx_parameters::ddx_params_type::error_message</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Last error message. </p>
-
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00071">71</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
-
-</div>
-</div>
 <a id="aff335b17a4bd5435a7d7ef8ea618e19a" name="aff335b17a4bd5435a7d7ef8ea618e19a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff335b17a4bd5435a7d7ef8ea618e19a">&#9670;&nbsp;</a></span>matvecmem</h2>
 
@@ -557,7 +515,7 @@ Public Attributes</h2></td></tr>
 
 <p>integer matvecmem. Build hsp matrix to speed up matrix-vec product </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00073">73</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00068">68</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
 
 </div>
 </div>
@@ -575,7 +533,7 @@ Public Attributes</h2></td></tr>
 
 <p>variable to enable debug printins: fname: name of the output file </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00076">76</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00071">71</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
 
 </div>
 </div>
@@ -593,7 +551,7 @@ Public Attributes</h2></td></tr>
 
 <p>len_fname: actual length of the output file </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00078">78</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00073">73</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
 
 </div>
 </div>
@@ -611,7 +569,7 @@ Public Attributes</h2></td></tr>
 
 <p>verbose: true if printing is enabled </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00080">80</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00075">75</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
 
 </div>
 </div>
@@ -629,7 +587,7 @@ Public Attributes</h2></td></tr>
 
 <p>output unit </p>
 
-<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00082">82</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ddx__parameters_8f90_source.html#l00077">77</a> of file <a class="el" href="ddx__parameters_8f90_source.html">ddx_parameters.f90</a>.</p>
 
 </div>
 </div>

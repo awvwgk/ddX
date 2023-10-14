@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jacobi_5fdiis_0',['jacobi_diis',['../namespaceddx__solvers.html#a1e4510a2d03b897c7b85fe46a764f1b3',1,'ddx_solvers']]],
-  ['jacobi_5fdiis_5fexternal_1',['jacobi_diis_external',['../namespaceddx__solvers.html#a6f349706acc6de4d84e54c95c842d056',1,'ddx_solvers']]]
+  ['jacobi_5fdiis_0',['jacobi_diis',['../namespaceddx__solvers.html#acdcf9f1c0ba8426d4a9b2ffad3de6efb',1,'ddx_solvers']]],
+  ['jacobi_5fdiis_5fexternal_1',['jacobi_diis_external',['../namespaceddx__solvers.html#a2c9249a133b775c0797782c115904e31',1,'ddx_solvers']]]
 ];

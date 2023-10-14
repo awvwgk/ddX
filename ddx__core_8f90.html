@@ -32,7 +32,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ddx<span id="projectnumber">&#160;0.4.4</span>
+   <div id="projectname">ddx<span id="projectnumber">&#160;0.6.0</span>
    </div>
    <div id="projectbrief">Libary for domain-decomposition methods for polarizable continuum models</div>
   </td>
@@ -105,6 +105,9 @@ Data Types</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__core_1_1ddx__state__type.html">ddx_core::ddx_state_type</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This defined type contains the primal and adjoint RHSs, the solution of the primal and adjoint linear systems, useful intermediates for the computation of the forces, and the information about the convergence of the linear system solver (time, number of iterations, relative difference at each iteration).  <a href="structddx__core_1_1ddx__state__type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__core_1_1ddx__electrostatics__type.html">ddx_core::ddx_electrostatics_type</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for the electrostatic properties. Since different methods require different electrostatic properties, defining this kind of general purpose container simplify the interfaces as we don't need different interfaces for different methods.  <a href="structddx__core_1_1ddx__electrostatics__type.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structddx__core_1_1ddx__type.html">ddx_core::ddx_type</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main ddX type that stores all the required information. Container for the params, contants and workspace derived types.  <a href="structddx__core_1_1ddx__type.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,21 +120,24 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:ad61ab429c20650b346640e460ed8049d"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#ad61ab429c20650b346640e460ed8049d">ddx_core::ddinit</a> (nsph, x, y, z, rvdw, model, lmax, ngrid, force, fmm, pm, pl, se, eta, eps, kappa, matvecmem, maxiter, jacobi_ndiis, nproc, output_filename, ddx_data)</td></tr>
-<tr class="memdesc:ad61ab429c20650b346640e460ed8049d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize ddX input with a full set of parameters.  <a href="namespaceddx__core.html#ad61ab429c20650b346640e460ed8049d">More...</a><br /></td></tr>
-<tr class="separator:ad61ab429c20650b346640e460ed8049d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab34ec195fbaa7838303efa0b7e0f0453"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#gab34ec195fbaa7838303efa0b7e0f0453">ddx_core::ddx_init_state</a> (params, constants, state)</td></tr>
-<tr class="memdesc:gab34ec195fbaa7838303efa0b7e0f0453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the ddx_state object.  <a href="group___fortran__interface__core.html#gab34ec195fbaa7838303efa0b7e0f0453">More...</a><br /></td></tr>
-<tr class="separator:gab34ec195fbaa7838303efa0b7e0f0453"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aee75a4b91a88dc68c3f3e02c8ae158"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a2aee75a4b91a88dc68c3f3e02c8ae158">ddx_core::ddfromfile</a> (fname, ddx_data, tol, charges)</td></tr>
-<tr class="memdesc:a2aee75a4b91a88dc68c3f3e02c8ae158"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read configuration from a file.  <a href="namespaceddx__core.html#a2aee75a4b91a88dc68c3f3e02c8ae158">More...</a><br /></td></tr>
-<tr class="separator:a2aee75a4b91a88dc68c3f3e02c8ae158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3258ae6ef23a4f07ea8a14ccf612acaa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a3258ae6ef23a4f07ea8a14ccf612acaa">ddx_core::ddfree</a> (ddx_data)</td></tr>
-<tr class="memdesc:a3258ae6ef23a4f07ea8a14ccf612acaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate object with corresponding data.  <a href="namespaceddx__core.html#a3258ae6ef23a4f07ea8a14ccf612acaa">More...</a><br /></td></tr>
-<tr class="separator:a3258ae6ef23a4f07ea8a14ccf612acaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5614410792c4a18a359eae6fd226cc8e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#ga5614410792c4a18a359eae6fd226cc8e">ddx_core::ddx_free_state</a> (state)</td></tr>
-<tr class="memdesc:ga5614410792c4a18a359eae6fd226cc8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the ddx_state object.  <a href="group___fortran__interface__core.html#ga5614410792c4a18a359eae6fd226cc8e">More...</a><br /></td></tr>
-<tr class="separator:ga5614410792c4a18a359eae6fd226cc8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3baeb2709ca74da4e5d10ec0f6f322e"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#ae3baeb2709ca74da4e5d10ec0f6f322e">ddx_core::allocate_model</a> (nsph, x, y, z, rvdw, model, lmax, ngrid, force, fmm, pm, pl, se, eta, eps, kappa, matvecmem, maxiter, jacobi_ndiis, nproc, output_filename, ddx_data, ddx_error)</td></tr>
+<tr class="memdesc:ae3baeb2709ca74da4e5d10ec0f6f322e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize ddX input with a full set of parameters.  <a href="namespaceddx__core.html#ae3baeb2709ca74da4e5d10ec0f6f322e">More...</a><br /></td></tr>
+<tr class="separator:ae3baeb2709ca74da4e5d10ec0f6f322e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab2cb4e36ac5aac47cf646c1ecae038"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a0ab2cb4e36ac5aac47cf646c1ecae038">ddx_core::deallocate_model</a> (ddx_data, ddx_error)</td></tr>
+<tr class="memdesc:a0ab2cb4e36ac5aac47cf646c1ecae038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate object with corresponding data.  <a href="namespaceddx__core.html#a0ab2cb4e36ac5aac47cf646c1ecae038">More...</a><br /></td></tr>
+<tr class="separator:a0ab2cb4e36ac5aac47cf646c1ecae038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3384ba8a6e7a373c05e90b28b20f9c1f"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#ga3384ba8a6e7a373c05e90b28b20f9c1f">ddx_core::allocate_electrostatics</a> (params, constants, electrostatics, ddx_error)</td></tr>
+<tr class="memdesc:ga3384ba8a6e7a373c05e90b28b20f9c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the chosen model, find the required electrostatic properties, and allocate the arrays for them in the container.  <a href="group___fortran__interface__core.html#ga3384ba8a6e7a373c05e90b28b20f9c1f">More...</a><br /></td></tr>
+<tr class="separator:ga3384ba8a6e7a373c05e90b28b20f9c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f9155be15f446c78e8b66000f8ad741"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#ga5f9155be15f446c78e8b66000f8ad741">ddx_core::deallocate_electrostatics</a> (electrostatics, ddx_error)</td></tr>
+<tr class="memdesc:ga5f9155be15f446c78e8b66000f8ad741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the electrostatic properties.  <a href="group___fortran__interface__core.html#ga5f9155be15f446c78e8b66000f8ad741">More...</a><br /></td></tr>
+<tr class="separator:ga5f9155be15f446c78e8b66000f8ad741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae238bb920d27ff43e7b645dbbed2a7ae"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#gae238bb920d27ff43e7b645dbbed2a7ae">ddx_core::allocate_state</a> (params, constants, state, ddx_error)</td></tr>
+<tr class="memdesc:gae238bb920d27ff43e7b645dbbed2a7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the ddx_state object.  <a href="group___fortran__interface__core.html#gae238bb920d27ff43e7b645dbbed2a7ae">More...</a><br /></td></tr>
+<tr class="separator:gae238bb920d27ff43e7b645dbbed2a7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf040e2fffef9eed7da72621ec2f172a3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___fortran__interface__core.html#gaf040e2fffef9eed7da72621ec2f172a3">ddx_core::deallocate_state</a> (state, ddx_error)</td></tr>
+<tr class="memdesc:gaf040e2fffef9eed7da72621ec2f172a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate the ddx_state object.  <a href="group___fortran__interface__core.html#gaf040e2fffef9eed7da72621ec2f172a3">More...</a><br /></td></tr>
+<tr class="separator:gaf040e2fffef9eed7da72621ec2f172a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4eafcca2db08df6f222c4a9874f1350"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#af4eafcca2db08df6f222c4a9874f1350">ddx_core::print_spherical</a> (iunit, label, nbasis, lmax, ncol, icol, x)</td></tr>
 <tr class="memdesc:af4eafcca2db08df6f222c4a9874f1350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print array of spherical harmonics.  <a href="namespaceddx__core.html#af4eafcca2db08df6f222c4a9874f1350">More...</a><br /></td></tr>
 <tr class="separator:af4eafcca2db08df6f222c4a9874f1350"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,9 +282,6 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a7f61e8dc65fa676434374f7ea9a07743"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a7f61e8dc65fa676434374f7ea9a07743">ddx_core::tree_m2p_bessel_nodiag_adj</a> (params, constants, p, alpha, grid_v, beta, sph_p, sph_m)</td></tr>
 <tr class="memdesc:a7f61e8dc65fa676434374f7ea9a07743"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="namespaceddx__core.html#a7f61e8dc65fa676434374f7ea9a07743">More...</a><br /></td></tr>
 <tr class="separator:a7f61e8dc65fa676434374f7ea9a07743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c8789fc01ba244fdaa0d4fef8e9d725"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a3c8789fc01ba244fdaa0d4fef8e9d725">ddx_core::efld</a> (ncav, zeta, ccav, nsph, csph, force)</td></tr>
-<tr class="memdesc:a3c8789fc01ba244fdaa0d4fef8e9d725"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="namespaceddx__core.html#a3c8789fc01ba244fdaa0d4fef8e9d725">More...</a><br /></td></tr>
-<tr class="separator:a3c8789fc01ba244fdaa0d4fef8e9d725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86f701c3486a5b26c650d5b157b6e213"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceddx__core.html#a86f701c3486a5b26c650d5b157b6e213">ddx_core::tree_grad_m2m</a> (params, constants, sph_m, sph_m_grad, work)</td></tr>
 <tr class="memdesc:a86f701c3486a5b26c650d5b157b6e213"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO.  <a href="namespaceddx__core.html#a86f701c3486a5b26c650d5b157b6e213">More...</a><br /></td></tr>
 <tr class="separator:a86f701c3486a5b26c650d5b157b6e213"><td class="memSeparator" colspan="2">&#160;</td></tr>
