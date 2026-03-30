@@ -138,6 +138,9 @@ type ddx_constants_type
     !> Derivative of the characteristic function U at all grid points of all
     !! spheres. Dimension is (3, ngrid, nsph).
     real(dp), allocatable :: zi(:, :, :)
+    !> Derivative of the characteristic function U at all grid points of all
+    !! spheres wrt to radii. Dimension is (ngrid, nsph).
+    real(dp), allocatable :: zi_dr(:, :)
     !> Number of external Lebedev grid points on a molecular surface.
     integer :: ncav
     !> Number of external Lebedev grid points on each sphere.
@@ -950,6 +953,13 @@ subroutine constants_geometry_init(params, constants, ddx_error)
             return
         endif
         constants % zi = zero
+
+        allocate(constants % zi_dr(params % ngrid, params % nsph), stat=info)
+        if (info .ne. 0) then
+            call update_error(ddx_error, "`zi_dr` allocation failed")
+            return
+        endif
+        constants % zi_dr = zero
     end if
     ! Build arrays fi, ui, zi
     !$omp parallel do default(none) shared(params,constants,swthr) &
@@ -983,6 +993,9 @@ subroutine constants_geometry_init(params, constants, ddx_error)
                             & params % rsph(jsph) / vv
                         constants % zi(:, igrid, isph) = &
                             & constants % zi(:, igrid, isph) + vv*v
+                        constants % zi_dr(igrid, isph) = &
+                            & constants % zi_dr(igrid, isph) &
+                            & + vv*dot_product(v, constants % cgrid(:, igrid))
                     end if
                 end if
             enddo
@@ -2008,6 +2021,12 @@ subroutine constants_free(constants, ddx_error)
         deallocate(constants % zi, stat=istat)
         if (istat .ne. 0) then
             call update_error(ddx_error, "`zi` deallocation failed!")
+        end if
+    end if
+    if (allocated(constants % zi_dr)) then
+        deallocate(constants % zi_dr, stat=istat)
+        if (istat .ne. 0) then
+            call update_error(ddx_error, "`zi_dr` deallocation failed!")
         end if
     end if
     if (allocated(constants % ncav_sph)) then

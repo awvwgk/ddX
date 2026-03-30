@@ -239,6 +239,68 @@ subroutine cosmo_solvation_force_terms(params, constants, workspace, &
 
 end subroutine cosmo_solvation_force_terms
 
+!> Compute the solvation term of the forces and the radial derivatives
+!> (solute aspecific). This must be summed to the solute specific term
+!! to get the full forces.
+!!
+!> @ingroup Fortran_interface_ddcosmo
+!! @param[in] params: User specified parameters
+!! @param[in] constants: Precomputed constants
+!! @param[inout] workspace: Preallocated workspaces
+!! @param[inout] state: ddx state (contains solutions and RHSs)
+!! @param[in] e_cav: electric field, size (3, ncav)
+!! @param[inout] force: force term
+!! @param[inout] ddx_error: ddX error
+!!
+subroutine cosmo_solvation_force_dr_terms(params, constants, workspace, &
+        & state, e_cav, force, dr, ddx_error)
+    implicit none
+    type(ddx_params_type), intent(in) :: params
+    type(ddx_constants_type), intent(in) :: constants
+    type(ddx_workspace_type), intent(inout) :: workspace
+    type(ddx_state_type), intent(inout) :: state
+    type(ddx_error_type), intent(inout) :: ddx_error
+    real(dp), intent(in) :: e_cav(3, constants % ncav)
+    real(dp), intent(inout) :: force(3, params % nsph)
+    real(dp), intent(inout) :: dr(params % nsph)
+    ! local variables
+    real(dp) :: start_time, finish_time
+    integer :: isph
+
+    ! dummy operation on unused interface arguments
+    if (ddx_error % flag .eq. 0) continue
+
+    start_time = omp_get_wtime()
+
+    force = zero
+    do isph = 1, params % nsph
+        call contract_grad_l(params, constants, isph, state % xs, &
+            & state % sgrid, workspace % tmp_vylm(:, 1), &
+            & workspace % tmp_vdylm(:, :, 1), workspace % tmp_vplm(:, 1), &
+            & workspace % tmp_vcos(:, 1), workspace % tmp_vsin(:, 1), &
+            & force(:, isph), dr(isph))
+        call contract_grad_u(params, constants, isph, state % sgrid, &
+            & state % phi_grid, force(:, isph), dr(isph))
+    end do
+
+    force = -pt5*force
+
+    call zeta_grad(params, constants, state, e_cav, force)
+
+    finish_time = omp_get_wtime()
+    state % force_time = finish_time - start_time
+
+end subroutine cosmo_solvation_force_dr_terms
+
+!> This routines precomputes the intermediates to be used in the evaluation
+!! of ddCOSMO analytical derivatives.
+!!
+!! @param[in] params: ddx parameters
+!! @param[in] constant: ddx constants
+!! @param[inout] workspace: ddx workspaces
+!! @param[inout] state: ddx state
+!!
+
 !> This routines precomputes the intermediates to be used in the evaluation
 !! of ddCOSMO analytical derivatives.
 !!
